@@ -15,7 +15,7 @@
     var a = document.createElement("script");
     a.setAttribute("async", "");
     a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    a.setAttribute("src", "[https://cdn.utmify.com.br/scripts/pixel/pixel.js](https://cdn.utmify.com.br/scripts/pixel/pixel.js)");
     document.head.appendChild(a);
   </script>
 
@@ -36,7 +36,9 @@
     }
   </script>
 
-  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
+
+  <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
   <link rel="preload" href="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/ab-test/696bdfc3b5b7b3215a70cfaf/player.js" as="script">
   <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
   <link rel="dns-prefetch" href="https://cdn.converteai.net">
@@ -44,6 +46,8 @@
   <link rel="dns-prefetch" href="https://images.converteai.net">
   <link rel="dns-prefetch" href="https://m3u8.vturb.net">
   <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+
 
   <style>
     :root {
@@ -58,12 +62,12 @@
     }
 
     * {
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     html,
     body {
-      min-height: 100%
+      min-height: 100%;
     }
 
     html {
@@ -73,7 +77,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color: var(--text);
       background:
         radial-gradient(900px 420px at 50% 0%, rgba(255, 0, 0, .22), transparent 55%),
@@ -91,7 +95,7 @@
       font-size: clamp(12px, 1.4vw, 14px);
       text-transform: uppercase;
       text-align: center;
-      padding: 12px 12px;
+      padding: 12px;
     }
 
     .wrap {
@@ -107,43 +111,15 @@
 
     .headline {
       font-weight: 800;
-      line-height: 1.12;
-      font-size: clamp(22px, 3.2vw, 44px);
+      font-size: clamp(24px, 3.2vw, 44px);
+      line-height: 1.15;
       margin: 0 0 26px;
-      text-shadow: 0 2px 22px rgba(0, 0, 0, .42);
       text-transform: uppercase;
+      text-shadow: 0 2px 22px rgba(0, 0, 0, .42);
     }
 
     .highlight-yellow {
       color: #f5c518;
-    }
-
-    .videoShell {
-      margin: 26px auto 10px;
-      max-width: 1000px;
-      border-radius: 18px;
-      background: rgba(0, 0, 0, .20);
-      border: 1px solid rgba(255, 255, 255, .10);
-      box-shadow: 0 26px 70px rgba(0, 0, 0, .55);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .video {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-      background:
-        radial-gradient(520px 240px at 50% 20%, rgba(255, 255, 255, .12), transparent 55%),
-        linear-gradient(135deg, rgba(255, 0, 0, .12), rgba(0, 0, 0, .60));
-    }
-
-    .video::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, .10), rgba(0, 0, 0, .55));
-      pointer-events: none;
     }
 
     .ratings {
@@ -153,13 +129,12 @@
       gap: 8px;
       margin-top: 18px;
       font-weight: 700;
-      font-size: clamp(13px, 1.4vw, 15px);
+      font-size: 14px;
     }
 
     .stars {
       color: #f5c518;
       letter-spacing: 2px;
-      font-size: clamp(14px, 1.6vw, 18px);
     }
 
     .belowFoldSpacer {
@@ -167,8 +142,8 @@
     }
 
     footer {
-      border-top: 1px solid rgba(255, 255, 255, .10);
-      background: rgba(0, 0, 0, .20);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      background: rgba(0, 0, 0, .2);
     }
 
     .footerWrap {
@@ -179,10 +154,10 @@
 
     .footLinks {
       display: flex;
-      gap: 14px;
       justify-content: center;
-      flex-wrap: wrap;
+      gap: 14px;
       margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
     .footLinks a {
@@ -192,60 +167,36 @@
       font-size: 13px;
     }
 
-    .footLinks a:hover {
-      text-decoration: underline
-    }
-
     .legal {
-      margin: 0 auto;
       max-width: 980px;
+      margin: 0 auto;
       color: var(--muted2);
       font-size: 12px;
       line-height: 1.55;
       text-align: center;
     }
 
+    /* 🎯 MOBILE: força 2 linhas SEM cortar texto */
+    /* 🎯 MOBILE: exatamente 2 linhas, sem corte */
     @media (max-width:560px) {
       .headline {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        font-size: 20px;
+        line-height: 1.18;
+        margin-bottom: 22px;
       }
 
-      .ratings {
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: 14px;
+      .headline .line-1,
+      .headline .line-2 {
+        display: block;
       }
+    }
 
-      .stars {
-        letter-spacing: 1px;
-      }
+    /* 🖥️ DESKTOP: mantém impacto visual */
+    @media (min-width:561px) {
 
-      .video {
-        aspect-ratio: 16/10;
-      }
-
-      .wrap {
-        padding: 20px 14px 24px;
-      }
-
-      .hero {
-        padding-left: 6px;
-        padding-right: 6px;
-      }
-
-      .videoShell {
-        border-radius: 16px;
-      }
-
-      .belowFoldSpacer {
-        height: 42vh;
-      }
-
-      .topStrip {
-        padding: 12px 10px;
+      .headline .line-1,
+      .headline .line-2 {
+        display: inline;
       }
     }
   </style>
@@ -253,22 +204,20 @@
 </head>
 
 <body>
+
   <div class="topStrip" id="topStrip"></div>
 
   <main class="wrap">
     <section class="hero">
-      <h1 class="headline">
-        ESSE É O <span class="highlight-yellow">SEGREDINHO</span> QUE FALTAVA PRA FAZER ELA JORRAR<br>
-        PRA FAZER ELA JORRAR
-      </h1>
+
+
+
 
       <vturb-smartplayer id="ab-696bdfc3b5b7b3215a70cfaf" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
-      <script type="text/javascript">
-        var s = document.createElement("script");
-        s.src = "https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/ab-test/696bdfc3b5b7b3215a70cfaf/player.js",
-        s.async = !0,
-        document.head.appendChild(s);
-      </script>
+      <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/ab-test/696bdfc3b5b7b3215a70cfaf/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+
+
 
       <div class="ratings" aria-label="Avaliações">
         <div class="stars">★★★★★</div>
@@ -303,8 +252,10 @@
       const dias = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO'];
       const meses = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
 
+
       const hoje = new Date();
       const texto = `SÓ HOJE, ${dias[hoje.getDay()]}, ${hoje.getDate()} DE ${meses[hoje.getMonth()]}`;
+
 
       const el = document.getElementById('topStrip');
       if (el) el.textContent = texto;
